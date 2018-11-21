@@ -1,4 +1,5 @@
 .icono {
+    -fx-font-family: 'Chakra Petch', sans-serif;
     -fx-background-color: #fff;
     -fx-background-radius: 50px;
     -fx-text-fill: #512DA8;
@@ -7,5 +8,14 @@
 
 AnchorPane {
     -fx-background-color: #512DA8;
-    -fx-font-family: 'Chakra Petch', sans-serif;
+    -fx-font-family: 'Quicksand', sans-serif;;
+}
+
+Label {
+    -fx-text-fill: #fff;
+    -fx-font-size: 18px;
+}
+
+.title {
+    -fx-font-size: 24px;
 }
