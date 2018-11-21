@@ -3,10 +3,16 @@ package view;
 import javafx.animation.FadeTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
+
+import java.io.IOException;
 
 public class SplashController {
 
@@ -15,6 +21,21 @@ public class SplashController {
 
     @FXML
     private Pane loadPane, rootPane;
+
+    private void openMenu() {
+        AnchorPane anchorPane = null;
+        try {
+            anchorPane = FXMLLoader.load(getClass().getResource("Menu.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(anchorPane);
+        Stage stage = new Stage();
+        stage.setTitle("Home menu");
+        stage.setMaximized(true);
+        stage.setScene(scene);
+        stage.show();
+    }
 
     public void initialize() {
 
@@ -80,7 +101,7 @@ public class SplashController {
                                     fadeTransition1.setOnFinished(event5 -> {
                                         Stage thisStage = (Stage) rootPane.getScene().getWindow();
                                         thisStage.close();
-                                        //showHome();
+                                        openMenu();
                                     });
 
                                 });
