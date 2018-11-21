@@ -2,6 +2,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -18,8 +19,8 @@ public class Main extends Application {
         anchorPane = FXMLLoader.load(getClass().getResource("view/Splash.fxml"));
         Scene scene = new Scene(anchorPane);
         // Añadir fuentes
-        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Chakra+Petch");
-        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Quicksand");
+        Font.loadFont(Main.class.getResource("fonts/ChakraPetch-Regular.ttf").toExternalForm(), 20);
+        Font.loadFont(Main.class.getResource("fonts/Quicksand-Regular.ttf").toExternalForm(), 20);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();
