@@ -3,6 +3,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -22,8 +24,15 @@ public class Main extends Application {
         // Añadir fuentes
         Font.loadFont(Main.class.getResource("fonts/ChakraPetch-Regular.ttf").toExternalForm(), 20);
         Font.loadFont(Main.class.getResource("fonts/Quicksand-Regular.ttf").toExternalForm(), 20);
-        primaryStage.getIcons().add(new Image("img/icon.png"));
+        primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
+        scene.setFill(Color.TRANSPARENT);
+        primaryStage.initStyle(StageStyle.TRANSPARENT);
+        Rectangle rect = new Rectangle(700, 500);
+        rect.setArcHeight(60.0);
+        rect.setArcWidth(60.0);
+        anchorPane.setClip(rect);
+        primaryStage.getIcons().add(new Image("img/icon.png"));
         primaryStage.setScene(scene);
         primaryStage.show();
     }
