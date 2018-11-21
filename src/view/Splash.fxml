@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 
 
-<AnchorPane prefHeight="500.0" prefWidth="700.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SplashController">
+<AnchorPane fx:id="rootPane" prefHeight="500.0" prefWidth="700.0" stylesheets="@estilo.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.SplashController">
    <children>
       <GridPane layoutX="200.0" layoutY="106.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
         <columnConstraints>
@@ -23,9 +23,9 @@
          <children>
             <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="5.0" GridPane.columnIndex="1">
                <children>
-                  <Label alignment="CENTER" contentDisplay="CENTER" minHeight="70.0" minWidth="70.0" styleClass="icono" text="J" textAlignment="CENTER" />
-                  <Label styleClass="title" text="Julen Bujanda" />
-                  <Label text="Welcome to the App!" />
+                  <Label fx:id="lblIcon" minHeight="70.0" minWidth="70.0" styleClass="icono" text="J" />
+                  <Label fx:id="lblTitle" styleClass="title" text="Julen Bujanda" />
+                  <Label fx:id="lblWelcome" text="Welcome to the App!" />
                </children>
             </VBox>
          </children>
@@ -40,7 +40,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <VBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1">
+            <VBox fx:id="loadPane" visible="false" alignment="CENTER" spacing="10.0" GridPane.columnIndex="1">
                <children>
                   <JFXSpinner minHeight="30.0" minWidth="30.0" />
                   <Label text="We're loading your experience" />
