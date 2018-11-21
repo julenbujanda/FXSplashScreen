@@ -39,7 +39,7 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <VBox fx:id="loadPane" alignment="CENTER" spacing="10.0" visible="false" GridPane.columnIndex="1">
+            <VBox fx:id="loadPane" alignment="CENTER" spacing="10.0" visible="false" opacity="0.0" GridPane.columnIndex="1">
                <children>
                   <JFXSpinner minHeight="30.0" minWidth="30.0" />
                   <Label text="We're loading your experience" />
