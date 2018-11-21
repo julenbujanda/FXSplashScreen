@@ -17,8 +17,9 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception {
         anchorPane = FXMLLoader.load(getClass().getResource("view/Splash.fxml"));
         Scene scene = new Scene(anchorPane);
-        // Añadir fuente
+        // Añadir fuentes
         scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Chakra+Petch");
+        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Quicksand");
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();
