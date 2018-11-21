@@ -1,0 +1,11 @@
+.icono {
+    -fx-background-color: #fff;
+    -fx-background-radius: 50px;
+    -fx-text-fill: #512DA8;
+    -fx-font-size: 30px;
+}
+
+AnchorPane {
+    -fx-background-color: #512DA8;
+    -fx-font-family: 'Chakra Petch', sans-serif;
+}
