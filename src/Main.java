@@ -3,6 +3,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 public class Main extends Application {
 
@@ -14,8 +15,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        anchorPane = FXMLLoader.load(getClass().getResource(""));
+        anchorPane = FXMLLoader.load(getClass().getResource("view/Splash.fxml"));
         Scene scene = new Scene(anchorPane);
+        // Añadir fuente
+        scene.getStylesheets().add("https://fonts.googleapis.com/css?family=Chakra+Petch");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
