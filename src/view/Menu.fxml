@@ -15,7 +15,7 @@
          <center>
             <Label text="You're in :)" BorderPane.alignment="CENTER">
                <font>
-                  <Font size="40.0" />
+                  <Font name="Quicksand" size="40.0" />
                </font>
             </Label>
          </center>
