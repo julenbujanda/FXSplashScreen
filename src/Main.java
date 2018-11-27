@@ -9,6 +9,10 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+/**
+ * Clase principal de la aplicación
+ * @author Julen Bujanda
+ */
 public class Main extends Application {
 
     private AnchorPane anchorPane;
@@ -24,6 +28,7 @@ public class Main extends Application {
         // Añadir fuentes
         Font.loadFont(Main.class.getResource("fonts/ChakraPetch-Regular.ttf").toExternalForm(), 20);
         Font.loadFont(Main.class.getResource("fonts/Quicksand-Regular.ttf").toExternalForm(), 20);
+        // Da forma a la ventana
         primaryStage.setResizable(false);
         primaryStage.initStyle(StageStyle.UNDECORATED);
         scene.setFill(Color.TRANSPARENT);

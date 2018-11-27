@@ -10,11 +10,14 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import javafx.stage.StageStyle;
 import javafx.util.Duration;
 
 import java.io.IOException;
 
+/**
+ * Clase controladora de Splash.fxml
+ * @author Julen Bujanda
+ */
 public class SplashController {
 
     @FXML
@@ -23,6 +26,10 @@ public class SplashController {
     @FXML
     private Pane loadPane, rootPane;
 
+    /**
+     * Abre una nueva ventana maximizada con el menú principal
+     * de la aplicación
+     */
     private void openMenu() {
         AnchorPane anchorPane = null;
         try {
@@ -39,6 +46,10 @@ public class SplashController {
         stage.show();
     }
 
+    /**
+     * Inicializa la aplicación y crea las animaciones
+     * del Splash
+     */
     public void initialize() {
 
         TranslateTransition translateTransition = new TranslateTransition(
